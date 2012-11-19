@@ -181,10 +181,13 @@ public class DateTimeTests {
 		DateTime dt1 = new DateTime(2012, 1, 1);
 		DateTime dt2 = new DateTime(2012, 1, 1);
 		Assert.assertEquals(true, dt1.equals(dt2));
+		Assert.assertEquals(dt1, dt2);
+		Assert.assertNotSame(dt1, dt2);
 
 		DateTime dt3 = new DateTime(2012, 1, 1);
 		DateTime dt4 = new DateTime(2012, 1, 2);
 		Assert.assertEquals(false, dt3.equals(dt4));
+		Assert.assertNotSame(dt3, dt4);
 
 		DateTime dt5 = new DateTime(2012, 1, 1, 10, 20, 30, 40);
 		DateTime dt6 = new DateTime(2012, 1, 1);
